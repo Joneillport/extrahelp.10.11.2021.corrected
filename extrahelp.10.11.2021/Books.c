@@ -21,7 +21,23 @@ P_BOOKS createBook(double ISBN, char bookAuthor[], char bookTitle[], int volumeN
 
 }
 
-void example(P_BOOKS lisitOfBooks) {
+P_BOOKS upDateList(P_BOOKS bookList, P_BOOKS nextBook) { // pointing to an empty list
+
+	if (bookList == NULL) { // have one book?
+		bookList = nextBook;
+		return NULL;
+	}
+	else {
+		P_BOOKS currentBook = bookList;
+		while (currentBook->next != NULL) {
+			 currentBook = currentBook->next;
+		}
+		currentBook->next = nextBook;
+	}
+}
+
+
+void example(P_BOOKS listOfBooks) {
 
 	return;
 }
@@ -50,7 +66,7 @@ P_BOOKS searchTitle(P_BOOKS listOfBooks, char bookTitle[])
 		}
 		else {
 			currentBook = currentBook->next;
-
+			// list of books = list of book->next;
 		}
 		
 	}

@@ -13,9 +13,11 @@
 
 /// 
 int main() {
-	
+
+	P_BOOKS bookList = NULL; // list of books empty 
 
 	P_BOOKS book1 = createBook(2111212, " random Author", "random title one", 32);
+	upDateList(bookList, book1);
 	P_BOOKS book2 = createBook(2111212, " random Author", "random title two", 42);
 	P_BOOKS book3 = createBook(2111212, " random Author", "random title three", 35);
 
